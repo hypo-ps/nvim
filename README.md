@@ -98,6 +98,3 @@ This configuration was inspired by:
 - [NvChad](https://github.com/NvChad/NvChad)
 - [LunarVim](https://github.com/LunarVim/LunarVim)
 
-## License
-
-MIT
