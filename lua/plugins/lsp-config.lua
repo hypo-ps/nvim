@@ -80,6 +80,21 @@ return {
                     )(fname) or vim.fn.getcwd()
                 end,
             })
+            -- added for go lsp
+            lspconfig.gopls.setup({
+                cmd = { "gopls", "serve" },
+                settings = {
+                    gopls = {
+                        analyses = {
+                            unusedparams = true,
+                        },
+                        staticcheck = true,
+                        usePlaceholders = true,
+                        completeUnimported = true,
+                    },
+                },
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            })
             for server_name, server_settings in pairs(servers) do
                 local config = vim.tbl_deep_extend("force",
                     { capabilities = capabilities },
