@@ -75,7 +75,7 @@ return {
                     "--clang-tidy",
                     "--header-insertion=iwyu",
                     "--completion-style=detailed",
-                    "--function-arg-placeholders",
+                    "--function-arg-placeholders=0",
                 },
                 filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
                 root_dir = function(fname)
